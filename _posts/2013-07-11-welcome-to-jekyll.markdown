@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Choo.YanSheng Highligher!"
 date:   2013-07-11 01:52:08
 categories: jekyll update
 ---
