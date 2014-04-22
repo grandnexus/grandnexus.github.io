@@ -1,13 +1,276 @@
----
-layout: default
-title: Choo.YanSheng Highlighter
----
+<!doctype html>
+<html>
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="description" content="E-Commerce, Electronic Commerce, Mobile Apps, Web Design, Web Development, Server Admin">
+	<meta name="author" content="Choo Yan Sheng">
+	
+	<title>Choo Yan Sheng</title> 
 
-<div id="home">
-  <h1>Highlights</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">	
+	
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	
+	<link rel="prefetch" href="images/zoom.png">
+
+</head>
+
+<body>
+	<div class="navbar navbar-fixed-top" data-activeslide="1">
+		<div class="container">
+
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			
+			<div class="nav-collapse collapse navbar-responsive-collapse">
+				<ul class="nav row">
+					<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
+					<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="#slide-2" title="Next Section"><span class="icon icon-user"></span> <span class="text">ABOUT ME</span></a></li>
+					<li data-slide="3" class="col-12 col-sm-2"><a id="menu-link-3" href="#slide-3" title="Next Section"><span class="icon icon-briefcase"></span> <span class="text">PORTFOLIO</span></a></li>
+					<li data-slide="4" class="col-12 col-sm-2"><a id="menu-link-4" href="#slide-4" title="Next Section"><span class="icon icon-gears"></span> <span class="text">EXPERIENCE</span></a></li>
+					<li data-slide="5" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5" title="Next Section"><span class="icon icon-gears"></span> <span class="text">EDUCATION</span></a></li>
+					<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-6" href="#slide-6" title="Next Section"><span class="icon icon-envelope"></span> <span class="text">CONTACT</span></a></li>
+				</ul>
+				<div class="row">
+					<div class="col-sm-2 active-menu"></div>
+				</div>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+	
+	
+	<!-- === Arrows === -->
+	<div id="arrows">
+		<div id="arrow-up" class="disabled"></div>
+		<div id="arrow-down"></div>
+		<div id="arrow-left" class="disabled visible-lg"></div>
+		<div id="arrow-right" class="disabled visible-lg"></div>
+	</div><!-- /.arrows -->
+	
+	
+	<!-- === MAIN Background === -->
+	<div class="slide story" id="slide-1" data-slide="1">
+		<div class="container">
+			<div id="home-row-1" class="row clearfix">
+				<div class="col-12">
+					<img class="img-responsive pull-left" src="images/professional.jpg">
+					<h1 class="font-semibold">E-COMMERCE <span class="font-thin">DEVELOPER</span></h1>
+					<h4 class="font-thin">Innovating the next <span class="font-semibold">web and mobile interactive solutions</span></h4>
+				</div><!-- /col-12 -->
+			</div><!-- /row -->
+			<!-- <div id="home-row-2" class="row clearfix">
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="4"><img src="images/s02.png"></div><span>PROFESSIONAL</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="images/s01.png"></div><span>FRIENDLY</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="5"><img src="images/s03.png"></div><span>SUITABLE</span></div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide1 -->
+	
+	<!-- === Slide 2 === -->
+	<div class="slide story" id="slide-2" data-slide="2">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin"><span class="font-semibold">Choo </span>Yan Sheng</div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-12 font-thin">Vegetarian <span class="font-semibold">Technologist</span></div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-tablet"></i></p>
+					<h2 class="font-thin">Mobile <span class="font-semibold">Apps</span></h2>
+					<h4 class="font-thin"><span class="label label-success">Android</span> <span class="label label-info">Hybrid (Web)</span></h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-laptop"></i></p>
+					<h2 class="font-thin">Web <span class="font-semibold">Design</span></h2>
+					<h4 class="font-thin"><span class="label label-success">HTML5</span> <span class="label label-info">CSS3</span> <span class="label label-danger">Bootstrap</span></h4>
+					<h4 class="font-thin"><span class="label label-warning">Photoshop</span></h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-code"></i></p>
+					<h2 class="font-thin">Web <span class="font-semibold">Development</span></h2>
+					<h4 class="font-thin"><span class="label label-success">Java</span> <span class="label label-info">JavaScript</span> <span class="label label-danger">PHP</span></h4>
+					<h4 class="font-thin"><span class="label label-warning">C++</span> <span class="label label-success">Groovy/Grails</span> <span class="label label-default">MySQL</span> </h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="icon icon-wrench"></i></p>
+					<h2 class="font-thin">Server <span class="font-semibold">Admin</span></h2>
+					<h4 class="font-thin"><span class="label label-warning">CCNA</span> <span class="label label-danger">Cabling</span> <span class="label label-default">Linux</span></h4>
+					<h4 class="font-thin"><span class="label label-success">Windows</span> <span class="label label-info">Shell Scripting</span></h4>
+				</div><!-- /col12 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide2 -->
+	
+	<!-- === SLide 3 - Portfolio -->
+	<div class="slide story" id="slide-3" data-slide="3">
+		<div class="row">
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/calenotes-large.png"><img class="thumb" src="images/portfolio/calenotes-small.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/foro-large.jpg"><img class="thumb" src="images/portfolio/foro-small.png" alt=""></a></div>
+			<div class="col-12 col-sm-4 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/blankbox-large.jpg"><img class="thumb" src="images/portfolio/blankbox-small.jpg" alt=""></a></div>
+			
+			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/cookingcertificate-large.jpg"><img class="thumb" src="images/portfolio/cookingcertificate-small.jpg" alt=""></a></div>
+			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/compclub-large.jpg"><img class="thumb" src="images/portfolio/compclub-small.jpg" alt=""></a></div>
+			<div class="col-12 col-sm-6 col-lg-2"><a data-fancybox-group="portfolio" class="fancybox" href="images/portfolio/mrwoodvarnish-large.jpg"><img class="thumb" src="images/portfolio/mrwoodvarnish-small.jpg" alt=""></a></div>
+
+		</div><!-- /row -->
+	</div><!-- /slide3 -->
+	
+	<!-- === Slide 4 - Process === -->
+	<div class="slide story" id="slide-4" data-slide="4">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin">Work <span class="font-semibold">Experience</span></div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+
+			<div class="row content-row">
+				<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				<div class="col-12 col-sm-3">
+					<p><i class="icon icon-bolt"></i></p>
+					<h2 class="font-thin">National Service<br><span class="font-semibold" >(Military)</span></h2>
+					<h3 class="font-thin">Sep 2009 - Dec 2011</h3>
+					<h3 class="font-thin"><span class="font-semibold" >Admin Support Assistant</span></h3>
+
+					<h4 class="font-thin">
+						3-Month Voluntarily Extension of Service</h4>
+						<h4 class="font-thin">Management of Exit, Leave & Air Ticket Purchasing</h4>
+						<h4 class="font-thin">Best Soldier of the Month for Aug 2011</h4>
+					</div><!-- /col12 -->
+					<div class="col-12 col-sm-3">
+						<p><i class="icon icon-cog"></i></p>
+						<h2 class="font-thin">Singapore Telecom<br><span class="font-semibold" >(SingTel)</span></h2>
+						<h3 class="font-thin">Aug 2009 - Sep 2009</h3>
+						<h3 class="font-thin"><span class="font-semibold" >IT Service Helpdesk</span></h3>
+						<h4 class="font-thin">ADSL Broadband Support for Small-Medium Enterprises</h4>
+						<h4 class="font-thin">Remote Technical Support & Troubleshooting in a Call Center/Customer Service Environment</h4>
+					</div><!-- /col12 -->
+					<div class="col-12 col-sm-3">
+						<p><i class="icon icon-cloud"></i></p>
+						<h2 class="font-thin">Cisco Systems<span class="font-semibold"> (Singapore)</span></h2>
+						<h3 class="font-thin">Sep 2008 - Nov 2008</h3>
+						<h3 class="font-thin"><span class="font-semibold" >College Intern</span></h3>
+						<h4 class="font-thin">Integrated Web Solutions Development for Cisco Customer Briefing Center</h4>
+						<h4 class="font-thin">4-Day Technical Support for Cisco Mobile Showcase Van (Cisco Express) held at Jakarta, Indonesia</h4>
+					</div><!-- /col12 -->
+					<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /slide4 -->
+
+		<!-- === Slide 5 === -->
+		<div class="slide story" id="slide-5" data-slide="5">
+			<div class="container">
+				<div class="row title-row">
+					<div class="col-12 font-thin"><span class="font-semibold">Education</span></div>
+				</div><!-- /row -->
+				<div class="row line-row">
+					<div class="hr">&nbsp;</div>
+				</div><!-- /row -->
+				<div class="row content-row">
+					<div class="col-sm-2 hidden-sm">&nbsp;</div>
+					<div class="col-12 col-sm-4">
+						<p><i class="icon icon-rocket"></i></p>
+						<h2 class="font-thin">National University of<br><span class="font-semibold" > Singapore (NUS)</span></h2>
+						<h3 class="font-thin">Aug 2012 - Present</h3>
+						<h3 class="font-thin"><span class="font-semibold" >Bachelor of Computing (Honours)</span></h3>
+						<h4 class="font-thin">E-Commerce Major</h4>
+						<h4 class="font-thin">Gold Recipient of NUS School of Computing Student Leadership Program Award 2014</h4>
+						<h4 class="font-thin">Director of IT for <br> NUS Students' Computing Club</h4>
+						<h4 class="font-thin">Facilitator for Facilitators@NUS</h4>
+					</div><!-- /col12 -->
+					<div class="col-12 col-sm-4">
+						<p><i class="icon icon-star"></i></p>
+						<h2 class="font-thin">Nanyang<br><span class="font-semibold" >Polytechnic (NYP)</span></h2>
+						<h3 class="font-thin">Apr 2006 - Mar 2009</h3>
+						<h3 class="font-thin"><span class="font-semibold" >Diploma in Multimedia & Infocomm Technology (Merit)</span></h3>
+						<h4 class="font-thin">IT Networking Specialization</h4>
+						<h4 class="font-thin">Director's List Recipient for 2008 & 2009</h4>
+						<h4 class="font-thin">Distinction in Final Year Project & Overseas Industrial Placement Program (Cisco Systems)</h4>
+						<h4 class="font-thin">Letter of Commendation (Outstanding Performance) for 2006/2007 & 2008/2009</h4>
+					</div><!-- /col12 -->
+					<div class="col-sm-2 hidden-sm">&nbsp;</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /slide5 -->
+
+		<!-- === Slide 6 / Contact === -->
+		<div class="slide story" id="slide-6" data-slide="6">
+			<div class="container">
+				<div class="row title-row">
+					<div class="col-12 font-light">Leave me a <span class="font-semibold">message</span></div>
+				</div><!-- /row -->
+				<div class="row line-row">
+					<div class="hr">&nbsp;</div>
+				</div><!-- /row -->
+				<div class="row subtitle-row">
+					<div class="col-sm-1 hidden-sm">&nbsp;</div>
+					<div class="col-12 col-sm-10 font-light">I am available for <span class="font-semibold">internship</span></div>
+					<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				</div><!-- /row -->
+				<div id="contact-row-4" class="row">
+					<div class="col-sm-1 hidden-sm">&nbsp;</div>
+					<div class="col-12 col-sm-3 with-hover-text">
+						<p><a target="_blank" href="mailto:choo.yansheng@nus.edu.sg"><i class="icon icon-envelope"></i></a></p>
+						<span class="hover-text font-light ">choo.yansheng@nus.edu.sg</span></a>
+					</div><!-- /col12 -->
+					<div class="col-12 col-sm-3 with-hover-text">
+						<p><a target="_blank" href="http://www.linkedin.com/in/chooyansheng"><i class="icon icon-linkedin"></i></a></p>
+						<span class="hover-text font-light ">linkedin/in/chooyansheng</span></a>
+					</div><!-- /col12 -->
+					<div class="col-12 col-sm-3 with-hover-text">
+						<p><a target="_blank" href="http://www.facebook.com/choo.yansheng"><i class="icon icon-facebook"></i></a></p>
+						<span class="hover-text font-light ">facebook/choo.yansheng</span></a>
+					</div><!-- /col12 -->
+					<div class="col-sm-1 hidden-sm">&nbsp;</div>
+				</div><!-- /row -->
+			</div><!-- /container -->
+		</div><!-- /Slide 6 -->
+
+	</body>
+
+	<!-- SCRIPTS -->
+	<script src="js/html5shiv.js"></script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+	<script src="js/script.js"></script>
+	
+	<!-- fancybox init -->
+	<script>
+		$(document).ready(function(e) {
+			var lis = $('.nav > li');
+			menu_focus( lis[0], 1 );
+
+			$(".fancybox").fancybox({
+				padding: 10,
+				helpers: {
+					overlay: {
+						locked: false
+					}
+				}
+			});
+
+		});
+	</script>
+
+	</html>
