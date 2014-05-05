@@ -23,7 +23,7 @@
 }
 
 * {
-	position: relative;
+/*	position: relative;*/
 }
 
 .breaker {
@@ -391,10 +391,10 @@ body {
 	
 	#slide-3 .col-12 {
 		display: inline-block;
-		height: 451px;
+		height: 251px;
 		margin: 0;
 		padding: 0;
-		width: 452px;
+		width: 252px;
 	}
 
 	#slide-3 a,
