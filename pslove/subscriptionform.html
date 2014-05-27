@@ -437,10 +437,6 @@
 
       paymentid = pack.options[pack.selectedIndex].id;
 
-      if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && ft.value != "" && fq.value != "" && st.value != "" && sq.value != "" && tt.value != "" && tq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
-        document.getElementById('subscribebtn').style.display = "block";
-      } else { document.getElementById('subscribebtn').style.display = "none"; }
-
       if(pack.options[pack.selectedIndex].value == 'Pampering Delights $15') {
         fb.disabled = true;
         ft.disabled = true;
@@ -451,6 +447,9 @@
         tq.disabled = true;
         fb.value = "";
         brandpads();
+        if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
+        document.getElementById('subscribebtn').style.display = "block";
+      } else { document.getElementById('subscribebtn').style.display = "none"; }
       } else {
         fb.disabled = false;
         ft.disabled = false;
@@ -459,6 +458,9 @@
         sq.disabled = false;
         tt.disabled = false;
         tq.disabled = false;
+        if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && ft.value != "" && fq.value != "" && st.value != "" && sq.value != "" && tt.value != "" && tq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
+        document.getElementById('subscribebtn').style.display = "block";
+      } else { document.getElementById('subscribebtn').style.display = "none"; }
       }
     }
 
