@@ -11,6 +11,7 @@
   <link rel="icon" href="img/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="css/datepicker.css">
   <link rel="stylesheet" href="css/pslove.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -50,7 +51,7 @@
                   </div>
                   <div class="form-group">
                     <label for="dateofbirth">Date of Birth*</label>
-                    <input type="date" id="dateofbirth" name="entry.1477961563" class="form-control"  placeholder="Date of Birth" onchange="validate()" data-validate="fields">
+                    <input type="text" id="dateofbirth" name="entry.1477961563" class="form-control"  placeholder="Date of Birth" onchange="validate()" data-validate="fields" data-date-format="dd-mm-yyyy">
                   </div>
                   <div class="form-group">
                     <label for="package">PSLove Package*</label>
@@ -64,25 +65,30 @@
                   </div>
                   <!-- Pad Brands & Types Section -->
                   <div id="content2" class="bhoechie-tab-content">
-                   <div class="form-group">
-                    <label for="brand">Favourite Brand*</label>
-                    <select id="brand" name="entry.423334642" class="form-control" onchange="validate(); brandpads();" data-validate="fields" disabled>
+                 
+                  <div class="row">
+
+                     <div class="form-group" style="margin-bottom:-15px;">
+                                         <div class="col-xs-3">
+                                                            <label for="entryl_firsttype">1st Brand*</label>
+                    <select id="entry_firstbrand" name="entry.423334642" class="form-control" onchange="validate(); brandpads(1);" data-validate="brandfields" disabled>
                       <option></option>
                       <option>Whisper</option><option>Laurier</option>
                       <option>Kotex</option><option>Sofy</option><option>Tampons</option>
                     </select>
+                    </div>
                   </div>
-                  <div class="row">
-                   <label for="entryl_firsttype">1st Type & Quantity*</label>
-                   <div class="form-group" style="margin-bottom:-15px;">
+                   <div class="form-group">
 
-                    <div class="col-xs-9">
+                    <div class="col-xs-6">
+                                                                                <label for="entryl_firsttype">1st Type*</label>
                       <select id="entry_firsttype" name="" class="form-control" onchange="validate()" data-validate="typefields" disabled>
                       </select>                
                     </div>
                   </div>
                   <div class="form-group">
                     <div class="col-xs-3">
+                                                                                                    <label for="entryl_firsttype">1st Quantity*</label>
                      <select id="entry_firstquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields" disabled>
                       <option></option><option>1</option>
                       <option>2</option><option>3</option>
@@ -97,15 +103,26 @@
                 </div>
               </div><br/>
               <div class="row">
-                <label for="entryl_secondtype">2nd Type & Quantity</label>
-                <div class="form-group" style="margin-bottom:-15px;">
-                  <div class="col-xs-9">
+                  <div class="form-group" style="margin-bottom:-15px;">
+                                         <div class="col-xs-3">
+                                                            <label for="entryl_firsttype">2nd Brand*</label>
+                    <select id="entry_secondbrand" name="entry.1582953702" class="form-control" onchange="validate(); brandpads(2);" data-validate="brandfields" disabled>
+                      <option></option>
+                      <option>Whisper</option><option>Laurier</option>
+                      <option>Kotex</option><option>Sofy</option><option>Tampons</option>
+                    </select>
+                    </div>
+                  </div>
+                <div class="form-group">
+                  <div class="col-xs-6">
+                                  <label for="entryl_secondtype">2nd Type</label>
                     <select id="entry_secondtype" name="" class="form-control" onchange="validate()" data-validate="typefields2" disabled>
                     </select>                
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-3">
+                                                <label for="entryl_secondtype">2nd Quantity</label>
                    <select id="entry_secondquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields2" disabled>
                     <option></option><option>1</option>
                     <option>2</option><option>3</option>
@@ -120,15 +137,28 @@
               </div>
             </div><br/>
             <div class="row">
-              <label for="entryl_thirdtype">3rd Type & Quantity</label>
-              <div class="form-group" style="margin-bottom:-15px;">
-                <div class="col-xs-9">
+                                 <div class="form-group" style="margin-bottom:-15px;">
+                                         <div class="col-xs-3">
+                                                            <label for="entryl_firsttype">3rd Brand*</label>
+                    <select id="entry_thirdbrand" name="entry.310833822" class="form-control" onchange="validate(); brandpads(3);" data-validate="brandfields" disabled>
+                      <option></option>
+                      <option>Whisper</option><option>Laurier</option>
+                      <option>Kotex</option><option>Sofy</option><option>Tampons</option>
+                    </select>
+                    </div>
+                  </div>
+
+              <div class="form-group">
+                <div class="col-xs-6">
+                              <label for="entryl_thirdtype">3rd Type</label>
                   <select id="entry_thirdtype" name="" class="form-control" onchange="validate()" data-validate="typefields2" disabled>
                   </select>                
                 </div>
               </div>
               <div class="form-group">
+
                 <div class="col-xs-3">
+                                          <label for="entryl_thirdtype">3rd Quantity</label>
                  <select id="entry_thirdquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields2" disabled>
                   <option></option><option>1</option>
                   <option>2</option><option>3</option>
@@ -169,7 +199,7 @@
               </div>
               <div class="form-group">
                 <label for="periodstartdate">Period Start Date*</label>
-                <input type="date" id="periodstartdate" name="entry.1098359083" class="form-control"  placeholder="Period Start Date" onchange="validate()" data-validate="fields">
+                <input type="text" id="periodstartdate" name="entry.1098359083" class="form-control"  placeholder="Period Start Date" onchange="validate()" data-validate="fields" data-date-format="dd-mm-yyyy">
               </div>You will receive your Period Care Package about 4 days before your period start date :) <br/><br/> Please note that if your next Period is less than 10 days away, your PS.Love Subscription will only start from the following Month.<br/><br/>
               <button type="button" class="btn btn-default btn-sm" onclick="tabnavigate(2,2);">
                 <span class="glyphicon glyphicon-arrow-left"></span> Prev</button>
@@ -232,6 +262,7 @@
                 <script src="js/jquery-1.10.2.js"></script>
                 <script src="js/bootstrap.min.js"></script>
                 <script src="js/bootstrapValidator.min.js"></script>
+                <script src="js/bootstrap-datepicker.js"></script>
 
                 <!-- Custom JavaScript -->
                 <script>
@@ -263,6 +294,8 @@
                     });
                   });
                   $(document).ready(function() {
+$('#dateofbirth').datepicker();
+$('#periodstartdate').datepicker();
                     $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
                       e.preventDefault();
                       $(this).siblings('a.active').removeClass("active");
@@ -279,9 +312,54 @@
                     $('#content'+ content).addClass('active');
                   }
                   var brandselection = false;
-                  function brandpads() {
-                    var brand = $("#brand option:selected").text();
-                    var whisper = [
+      
+                  function brandpads(options) {
+                    var brand1 = $("#entry_firstbrand option:selected").text();
+                    var brand2 = $("#entry_secondbrand option:selected").text();
+                    var brand3 = $("#entry_thirdbrand option:selected").text();
+
+                    var select = document.getElementById("entry_firsttype");
+                    var select2 = document.getElementById("entry_secondtype");
+                    var select3 = document.getElementById("entry_thirdtype");
+                    var quantity = document.getElementById("entry_firstquantity");
+                    var quantity2 = document.getElementById("entry_secondquantity");
+                    var quantity3 = document.getElementById("entry_thirdquantity");
+
+                    select.name = "entry.1298116633";
+                    select2.name = "entry.235971654";
+                    select3.name = "entry.705291773";
+                    quantity.name = "entry.1133644161";
+                    quantity2.name = "entry.1939649342";
+                    quantity3.name = "entry.375999834";
+                    if(options == 1) {
+                      choosebrand(brand1,select,quantity);
+                    } else if(options == 2) {
+                      choosebrand(brand2,select2,quantity2);
+                    } else if(options == 3) {
+                                       choosebrand(brand3,select3,quantity3);
+                    }
+    
+ 
+              
+                  }
+                  function packageoptions(brands,selects,quantitys,brandselected) {
+                      if (brandselected) {
+                        var length = selects.options.length;
+
+                        for (i = 0; i < length; i++) {
+                          selects.options[0] = null;
+                          quantitys.selectedIndex = 0;
+                        }
+                        brandselected = false;
+                      }
+                      for(var i = brands.length-1; i >= 0; i--) {
+                        var option = document.createElement('option');
+                        option.text = option.value = brands[i];
+                        selects.add(option, 0);
+                      }
+                    }
+                                      function choosebrand(brands,selects,quantitys) {
+                                        var whisper = [
                     "",
                     "Regular Flow (Non-wings) - 23cm",
                     "Regular Flow (Wings) - 23cm",
@@ -360,82 +438,37 @@
                     "o.b. ProComfort SilkTouch Regular",
                     "o.b. ProComfort SilkTouch Super"
                     ];
-
-                    var select = document.getElementById("entry_firsttype");
-                    var select2 = document.getElementById("entry_secondtype");
-                    var select3 = document.getElementById("entry_thirdtype");
-                    var quantity = document.getElementById("entry_firstquantity");
-                    var quantity2 = document.getElementById("entry_secondquantity");
-                    var quantity3 = document.getElementById("entry_thirdquantity");
-
-                    select.name = "entry.1298116633";
-                    select2.name = "entry.235971654";
-                    select3.name = "entry.705291773";
-                    quantity.name = "entry.1133644161";
-                    quantity2.name = "entry.1939649342";
-                    quantity3.name = "entry.375999834";
-
-                    function packageoptions(brands) {
-                      if (brandselection) {
-                        var length = select.options.length;
-
-                        for (i = 0; i < length; i++) {
-                          select.options[0] = null;
-                          select2.options[0] = null;
-                          select3.options[0] = null;
-                          quantity.selectedIndex = 0;
-                          quantity2.selectedIndex = 0;
-                          quantity3.selectedIndex = 0;
-                        }
-                        brandselection = false;
-                      }
-                      for(var i = brands.length-1; i >= 0; i--) {
-                        var option = document.createElement('option');
-                        option.text = option.value = brands[i];
-                        select.add(option, 0);
-                        var option = document.createElement('option');
-                        option.text = option.value = brands[i];
-                        select2.add(option, 0);
-                        var option = document.createElement('option');
-                        option.text = option.value = brands[i];
-                        select3.add(option, 0);
-                      }
-                    }
-                    switch(brand) {
+                                   switch(brands) {
                       case "Whisper":
-                      packageoptions(whisper);
+                      packageoptions(whisper,selects,quantitys,brandselection);
                       brandselection = true;
                       break;
                       case "Laurier":
-                      packageoptions(laurier);
-                      brandselection = true;
+                      packageoptions(laurier,selects,quantitys,brandselection);
+                     brandselection = true;
                       break;
                       case "Kotex":
-                      packageoptions(kotex);
-                      brandselection = true;
+                      packageoptions(kotex,selects,quantitys,brandselection);
+                     brandselection = true;
                       break;
                       case "Sofy":
-                      packageoptions(sofy);
+                      packageoptions(sofy,selects,quantitys,brandselection);
                       brandselection = true;
                       break;
                       case "Tampons":
-                      packageoptions(tampons);
+                      packageoptions(tampons,selects,quantitys,brandselection);
                       brandselection = true;
                       break;
                       case "":
-                      var length = select.options.length;
+                      var length = selects.options.length;
 
                       for (i = 0; i < length; i++) {
-                        select.options[0] = null;
-                        select2.options[0] = null;
-                        select3.options[0] = null;
-                        quantity.selectedIndex = 0;
-                        quantity2.selectedIndex = 0;
-                        quantity3.selectedIndex = 0;
+                        selects.options[0] = null;
+                        quantitys.selectedIndex = 0;
                       }
                       break;
                     }
-                  }
+                    }
 
                   function validate() {
                     var fn = document.getElementById('firstname');
@@ -443,7 +476,9 @@
                     var dob = document.getElementById('dateofbirth');
                     var pack = document.getElementById('package');
 
-                    var fb = document.getElementById('brand');
+                    var fb = document.getElementById('entry_firstbrand');
+                    var sb = document.getElementById('entry_secondbrand');
+                    var tb = document.getElementById('entry_thirdbrand');
                     var ft = document.getElementById('entry_firsttype');
                     var fq = document.getElementById('entry_firstquantity');
                     var st = document.getElementById('entry_secondtype');
@@ -467,6 +502,8 @@
 
                     if(pack.options[pack.selectedIndex].value == 'Pampering Delights $15' || pack.options[pack.selectedIndex].value == "") {
                       fb.disabled = true;
+                      sb.disabled = true;
+                                           tb.disabled = true;
                       ft.disabled = true;
                       fq.disabled = true;
                       st.disabled = true;
@@ -474,12 +511,22 @@
                       tt.disabled = true;
                       tq.disabled = true;
                       fb.value = "";
+                      sb.value = "";
+                      tb.value = "";
+                                            ft.value = "";
+                      st.value = "";
+                      tt.value = "";
+                                            fq.value = "";
+                      sq.value = "";
+                      tq.value = "";
                       brandpads();
                       if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
                         document.getElementById('subscribebtn').style.display = "block";
                       } else { document.getElementById('subscribebtn').style.display = "none"; }
                     } else {
-                      fb.disabled = false;
+               fb.disabled = false;
+                      sb.disabled = false;
+                                           tb.disabled = false;
                       ft.disabled = false;
                       fq.disabled = false;
                       st.disabled = false;
@@ -490,7 +537,7 @@
                       totalquantity = parseInt(fq.options[fq.selectedIndex].value) + parseInt(sq.options[sq.selectedIndex].value) + parseInt(tq.options[tq.selectedIndex].value);
                       if(totalquantity >15) {alert('You have chosen a total of ' + totalquantity + ' pads. Please keep it within 15 pads or less.');}
                       
-                      if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && ft.value != "" && fq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
+                      if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && sb.value != "" && tb.value != "" && ft.value != "" && fq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
                         document.getElementById('tcprevbtn').style.display = "none";
                         document.getElementById('subscribebtn').style.display = "block";
                       } else { 
@@ -537,7 +584,8 @@
                             }
                           }
                         },
-                        'entry.423334642': {
+                        brandtype: {
+                          selector: '[data-validate="brandfields"]',
                           validators: {
                             notEmpty: {
                               message: 'The Pad Brand is required and cannot be empty'
