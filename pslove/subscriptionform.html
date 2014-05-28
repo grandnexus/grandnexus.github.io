@@ -41,19 +41,19 @@
                 <!-- Particulars Section -->
                 <div id="content1" class="bhoechie-tab-content active">
                   <div class="form-group">
-                    <label for="firstname">First Name</label>
+                    <label for="firstname">First Name*</label>
                     <input type="text" id="firstname" name="entry.825424731" class="form-control" placeholder="First Name" onchange="validate()" data-validate="fields">
                   </div>
                   <div class="form-group">
-                    <label for="lastname">Last Name</label>
+                    <label for="lastname">Last Name*</label>
                     <input type="text" id="lastname" name="entry.1027581191" class="form-control" placeholder="Last Name" onchange="validate()" data-validate="fields">
                   </div>
                   <div class="form-group">
-                    <label for="dateofbirth">Date of Birth</label>
+                    <label for="dateofbirth">Date of Birth*</label>
                     <input type="date" id="dateofbirth" name="entry.1477961563" class="form-control"  placeholder="Date of Birth" onchange="validate()" data-validate="fields">
                   </div>
                   <div class="form-group">
-                    <label for="package">PSLove Package</label>
+                    <label for="package">PSLove Package*</label>
                     <select id="package" name="entry.1162798613" class="form-control" onchange="validate();" data-validate="fields">
                       <option></option>
                       <option id="0" value="Pampering Delights $15">Pampering Delights $15</option><option id="1" value="Complete Happiness $19">Complete Happiness $19</option><option id="2" value="Ultimate Indulgence $35 (Sold Out)" disabled>Ultimate Indulgence $35 (Sold Out)</option>
@@ -65,7 +65,7 @@
                   <!-- Pad Brands & Types Section -->
                   <div id="content2" class="bhoechie-tab-content">
                    <div class="form-group">
-                    <label for="brand">Favourite Brand</label>
+                    <label for="brand">Favourite Brand*</label>
                     <select id="brand" name="entry.423334642" class="form-control" onchange="validate(); brandpads();" data-validate="fields" disabled>
                       <option></option>
                       <option>Whisper</option><option>Laurier</option>
@@ -73,7 +73,7 @@
                     </select>
                   </div>
                   <div class="row">
-                   <label for="entryl_firsttype">1st Type & Quantity</label>
+                   <label for="entryl_firsttype">1st Type & Quantity*</label>
                    <div class="form-group" style="margin-bottom:-15px;">
 
                     <div class="col-xs-9">
@@ -84,7 +84,7 @@
                   <div class="form-group">
                     <div class="col-xs-3">
                      <select id="entry_firstquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields" disabled>
-                      <option></option><option>0</option><option>1</option>
+                      <option></option><option>1</option>
                       <option>2</option><option>3</option>
                       <option>4</option><option>5</option>
                       <option>6</option><option>7</option>
@@ -100,14 +100,14 @@
                 <label for="entryl_secondtype">2nd Type & Quantity</label>
                 <div class="form-group" style="margin-bottom:-15px;">
                   <div class="col-xs-9">
-                    <select id="entry_secondtype" name="" class="form-control" onchange="validate()" data-validate="typefields" disabled>
+                    <select id="entry_secondtype" name="" class="form-control" onchange="validate()" data-validate="typefields2" disabled>
                     </select>                
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-xs-3">
-                   <select id="entry_secondquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields" disabled>
-                    <option></option><option>0</option><option>1</option>
+                   <select id="entry_secondquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields2" disabled>
+                    <option></option><option>1</option>
                     <option>2</option><option>3</option>
                     <option>4</option><option>5</option>
                     <option>6</option><option>7</option>
@@ -123,14 +123,14 @@
               <label for="entryl_thirdtype">3rd Type & Quantity</label>
               <div class="form-group" style="margin-bottom:-15px;">
                 <div class="col-xs-9">
-                  <select id="entry_thirdtype" name="" class="form-control" onchange="validate()" data-validate="typefields" disabled>
+                  <select id="entry_thirdtype" name="" class="form-control" onchange="validate()" data-validate="typefields2" disabled>
                   </select>                
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-xs-3">
-                 <select id="entry_thirdquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields" disabled>
-                  <option></option><option>0</option><option>1</option>
+                 <select id="entry_thirdquantity" name="" class="form-control" onchange="validate()" data-validate="quantityfields2" disabled>
+                  <option></option><option>1</option>
                   <option>2</option><option>3</option>
                   <option>4</option><option>5</option>
                   <option>6</option><option>7</option>
@@ -152,7 +152,7 @@
             <!-- Period Section -->
             <div id="content3" class="bhoechie-tab-content">
               <div class="form-group">
-                <label for="cyclelength">Cycle Length</label>
+                <label for="cyclelength">Cycle Length*</label>
                 <select id="cyclelength" name="entry.1543152247" class="form-control" onchange="validate()" data-validate="fields">
                   <option></option><option>< 21 Days</option>
                   <option>21</option><option>22</option>
@@ -168,7 +168,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <label for="periodstartdate">Period Start Date</label>
+                <label for="periodstartdate">Period Start Date*</label>
                 <input type="date" id="periodstartdate" name="entry.1098359083" class="form-control"  placeholder="Period Start Date" onchange="validate()" data-validate="fields">
               </div>You will receive your Period Care Package about 4 days before your period start date :) <br/><br/> Please note that if your next Period is less than 10 days away, your PS.Love Subscription will only start from the following Month.<br/><br/>
               <button type="button" class="btn btn-default btn-sm" onclick="tabnavigate(2,2);">
@@ -180,23 +180,23 @@
                 <!-- Contacts & Delivery Section -->
                 <div id="content4" class="bhoechie-tab-content">
                   <div class="form-group">
-                    <label for="emailaddress">Email</label>
+                    <label for="emailaddress">Email*</label>
                     <input type="email" id="emailaddress" name="entry.1446886453" class="form-control"  placeholder="Email" onchange="validate()" data-validate="fields">
                   </div>
                   <div class="form-group">
-                    <label for="contactnumber">Contact Number</label>
+                    <label for="contactnumber">Contact Number*</label>
                     <input type="text" id="contactnumber" name="entry.163093983" class="form-control"  placeholder="Contact Number" onchange="validate()" data-validate="fields">
                   </div>
                   <div class="form-group">
-                    <label for="deliveryaddress">Delivery Address</label>
+                    <label for="deliveryaddress">Delivery Address*</label>
                     <textarea id="deliveryaddress" name="entry.148714031" class="form-control" rows="3" placeholder="Delivery Address" onchange="validate()" data-validate="fields"></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="postalcode">Postal Code</label>
+                    <label for="postalcode">Postal Code*</label>
                     <input type="text" id="postalcode" name="entry.555706955" class="form-control" placeholder="Postal Code" onchange="validate()" data-validate="fields">
                   </div>
                   <div class="form-group">
-                    <label for="homedelivery">Do you have anyone at home to receive the delivery?</label>
+                    <label for="homedelivery">Do you have anyone at home to receive the delivery?*</label>
                     <select id="homedelivery" name="entry.388619334" class="form-control" onchange="validate()" data-validate="fields">
                       <option></option>
                       <option>Yes</option>
@@ -214,12 +214,12 @@
                     <div id="content5" class="bhoechie-tab-content">
                       <div class="form-group">By indicating your consent to provide your personal data in this form, you agree to receive updates and important announcements for the purpose of PSLove Services by email and phone. All personal information will be kept confidential and used for the purpose(s) stated only.</div>
                       <div class="form-group">
-                        <input id="group_1126276659_1" name="entry.1126276659" value="Agree" type="checkbox" onclick="validate();" data-validate="fields"/> I Agree.
+                        <input id="group_1126276659_1" name="entry.1126276659" value="Agree" type="checkbox" onclick="validate();" data-validate="fields"/> I Agree.*
                       </div>
                       <div class="form-group">To help you make an informed decision, withdrawing consent will result in not being able to receive updates and important announcements for the purpose of PSLove Services.
                         Should you wish to withdraw your consent for PSLove to contact you for the purposes stated above, please notify us by sending an email to <a href="mailto:team@pslove.co">team@pslove.co</a>. We will then remove your personal information from our database. Please allow 10 business days for your request to take effect.</div>
                         <div class="form-group">
-                          <input id="group_1028974965_1" name="entry.1028974965" value="Agree" type="checkbox" onclick="validate();" data-validate="fields"/> I Agree. </div>The 'Subscribe' button will appear once you have filled up all the required fields in this form. You will be redirected to Paypal after you clicked 'Subscribe' button below. You do not need a Paypal Account to use MasterCard or VISA. All online payments route through Paypal and your details are secured with industry-leading SSL technology.<br/><br/>                            <button type="button" class="btn btn-default btn-sm" onclick="tabnavigate(4,4);">
+                          <input id="group_1028974965_1" name="entry.1028974965" value="Agree" type="checkbox" onclick="validate();" data-validate="fields"/> I Agree.* </div>The 'Subscribe' button will appear once you have filled up all the required fields in this form. You will be redirected to Paypal after you clicked 'Subscribe' button below. You do not need a Paypal Account to use MasterCard or VISA. All online payments route through Paypal and your details are secured with industry-leading SSL technology.<br/><br/>                            <button type="button" id="tcprevbtn" class="btn btn-default btn-sm" onclick="tabnavigate(4,4);">
                           <span class="glyphicon glyphicon-arrow-left"></span> Prev</button><br/><br/>
                           <div id="subscribebtn" style="display:none;"><button id="subscribebutton" type="submit" class="btn btn-success btn-block" role="button" disabled>Subscribe</button></div><br/>
                         </div>
@@ -490,9 +490,12 @@
                       totalquantity = parseInt(fq.options[fq.selectedIndex].value) + parseInt(sq.options[sq.selectedIndex].value) + parseInt(tq.options[tq.selectedIndex].value);
                       if(totalquantity >15) {alert('You have chosen a total of ' + totalquantity + ' pads. Please keep it within 15 pads or less.');}
                       
-                      if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && ft.value != "" && fq.value != "" && st.value != "" && sq.value != "" && tt.value != "" && tq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
+                      if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && ft.value != "" && fq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
+                        document.getElementById('tcprevbtn').style.display = "none";
                         document.getElementById('subscribebtn').style.display = "block";
-                      } else { document.getElementById('subscribebtn').style.display = "none"; }
+                      } else { 
+                        document.getElementById('tcprevbtn').style.display = "";
+                        document.getElementById('subscribebtn').style.display = "none"; }
                     }
                   }
 
