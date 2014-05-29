@@ -173,6 +173,7 @@
                 </div>
               </div><br/>
               Mix and Match up to 3 Types of Pads/Tampons. (You may choose up to 15 Pieces in Total.)
+              <div id="alertquantity" class="alert alert-danger" style="display:none;"></div>
               <br/><br/>
               <button type="button" class="btn btn-default btn-sm" onclick="tabnavigate(1,1);">
                 <span class="glyphicon glyphicon-arrow-left"></span> Prev</button>
@@ -535,7 +536,14 @@
                        tq.disabled = false;
                        var totalquantity = 0;
                        totalquantity = parseInt(fq.options[fq.selectedIndex].value) + parseInt(sq.options[sq.selectedIndex].value) + parseInt(tq.options[tq.selectedIndex].value);
-                       if(totalquantity >15) {alert('You have chosen a total of ' + totalquantity + ' pads. Please keep it within 15 pads or less.');}
+                       if(totalquantity >15) {
+                        document.getElementById('alertquantity').style.display = "block";
+                        $('#alertquantity').text('You have chosen a total of ' + totalquantity + ' pads. Please keep it within 15 pads or less.'); 
+                      } else {
+                        document.getElementById('alertquantity').style.display = "none";
+                        $('#alertquantity').text(''); 
+                      }
+
                        
                        if(fn.value != "" && ln.value != "" && dob.value != "" && pack.value != "" && fb.value != "" && ft.value != "" && fq.value != "" && cl.value != "" && psd.value != "" && email.value != "" && cn.value != "" && da.value != "" && pc.value != "" && home.value != "" && ca.checked && wa.checked) {
                         document.getElementById('tcprevbtn').style.display = "none";
