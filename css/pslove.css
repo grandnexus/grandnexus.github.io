@@ -1,6 +1,13 @@
 /* Global Styles */
 .bv-form .help-block{margin-bottom:0}.nav-tabs li.bv-tab-success>a{color:#3c763d}.nav-tabs li.bv-tab-error>a{color:#a94442}
-
+body{
+    overflow-y:hidden;
+}
+@media only screen and (max-width:960px){
+    body{
+        overflow-y:scroll;
+    }
+}
 html,
 body {
   height: 100%;
