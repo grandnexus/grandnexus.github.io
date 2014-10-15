@@ -400,7 +400,7 @@ body {
 	#slide-3 a,
 	#slide-3 img {
 		display: inline-block;
-		height: 100%;
+		/*height: 100%;*/
 		margin: 0 auto;
 		width: 100%;
 	}
