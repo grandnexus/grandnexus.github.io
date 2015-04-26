@@ -264,11 +264,12 @@ body {
 	background-attachment: relative;
 	background-position: center center;
 }
+@media (min-width: 767px) {
 
-#slide-1 h1 {
-	padding-top: 130px;
+	#slide-1 h1 {
+		padding-top: 130px;
+	}
 }
-
 @media (max-width: 991px) {
 	#slide-1 {
 		background-position: -70% 0, 170% 0;
