@@ -216,7 +216,7 @@ body {
 }
 
 #slide-0 {
-	background-color: #3498db;
+	background-color: #4c88e5;
 	color: #ffffff;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -336,7 +336,7 @@ body {
 }
 
 #slide-2 {
-	background-color: #3498db;
+	background-color: #4c88e5;
 	color: #e4e6e5;
 	// padding-top: 90px;
 }
@@ -491,7 +491,7 @@ body {
 }
 
 #slide-6 {
-	background-color: #2f2f2f;
+	background-color: #4c88e5;
 	color: #e4e6e5;
 	padding-bottom: 350px;
 	padding-top: 90px;
@@ -504,8 +504,8 @@ body {
 }
 	
 	#slide-6 .line-row .hr {
-		background-color: #4e4e4e;
-		color: #4e4e4e;
+		background-color: #ffffff;
+		color: #ffffff;
 	}
 
 	#slide-6 a {
