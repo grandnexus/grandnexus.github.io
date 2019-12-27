@@ -16,13 +16,13 @@ class CertifiedColumns extends StatelessWidget {
                 context,
                 const Image(
                   image: AssetImage(
-                    'images/certificate-itil.webp',
+                    'images/certificate-itil.png',
                   ),
                 ),
               ),
               child: const Image(
                 image: AssetImage(
-                  'images/certified-itil.webp',
+                  'images/certified-itil.png',
                 ),
               ),
             ),
@@ -33,7 +33,7 @@ class CertifiedColumns extends StatelessWidget {
               onTap: () => launchURL('https://bit.ly/jasonchoo-gce'),
               child: const Image(
                 image: AssetImage(
-                  'images/certified-gce.webp',
+                  'images/certified-gce.png',
                 ),
               ),
             ),
@@ -44,7 +44,7 @@ class CertifiedColumns extends StatelessWidget {
               onTap: () => launchURL('https://bit.ly/jasonchoo-csm'),
               child: const Image(
                 image: AssetImage(
-                  'images/certified-csm.webp',
+                  'images/certified-csm.png',
                 ),
               ),
             ),
