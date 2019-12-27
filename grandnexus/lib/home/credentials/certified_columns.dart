@@ -5,52 +5,52 @@ import 'package:grandnexus/utils.dart';
 class CertifiedColumns extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            InkWell(
+    return Container(
+      width: 500.0,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Expanded(
+            child: InkWell(
               onTap: () => showImageDialog(
                 context,
                 const Image(
-                  width: 120,
                   image: AssetImage(
                     'images/certificate-itil.webp',
                   ),
                 ),
               ),
               child: const Image(
-                width: 120,
                 image: AssetImage(
                   'images/certified-itil.webp',
                 ),
               ),
             ),
-            const SizedBox(width: 30.0),
-            InkWell(
+          ),
+          const SizedBox(width: 30.0),
+          Expanded(
+            child: InkWell(
               onTap: () => launchURL('https://bit.ly/jasonchoo-gce'),
               child: const Image(
-                width: 120,
                 image: AssetImage(
                   'images/certified-gce.webp',
                 ),
               ),
             ),
-            const SizedBox(width: 30.0),
-            InkWell(
+          ),
+          const SizedBox(width: 30.0),
+          Expanded(
+            child: InkWell(
               onTap: () => launchURL('https://bit.ly/jasonchoo-csm'),
               child: const Image(
-                width: 150,
                 image: AssetImage(
                   'images/certified-csm.webp',
                 ),
               ),
             ),
-          ],
-        ),
-      ],
+          ),
+        ],
+      ),
     );
   }
 }

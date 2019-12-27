@@ -16,6 +16,7 @@ class Credentials extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(10.0),
       color: Colors.white,
       child: Stack(
         children: <Widget>[
