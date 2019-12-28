@@ -17,10 +17,8 @@ class ScrollButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      left: MediaQuery.of(context).size.width / 2.1,
-      top: isScrollUp ? 10 : null,
-      bottom: isScrollUp ? null : 10,
+    return Align(
+      alignment: isScrollUp ? Alignment.topCenter : Alignment.bottomCenter,
       child: IconButton(
         color: color,
         icon: Icon(icon),
