@@ -21,24 +21,25 @@ class _HomeState extends State<Home> {
   void scrollToPreviousSection() => _controller.animateTo(0,
       curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 900));
 
-  void scrollToNextSection() => _controller.animateTo(1000,
+  void scrollToNextSection(double height) => _controller.animateTo(height,
       curve: Curves.fastOutSlowIn, duration: const Duration(milliseconds: 900));
 
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SnapListView(
         controller: _controller,
         scrollDirection: Axis.vertical,
-        itemExtent: MediaQuery.of(context).size.height,
+        itemExtent: height,
         children: <Widget>[
           // [Home] Credentials Section
           Credentials(
-            onScrollDown: scrollToNextSection,
+            onScrollDown: () => scrollToNextSection(height),
           ),
           // [Home] Portfolios Section
           Portfolios(
-            onScrollUp: scrollToPreviousSection,
+            onScrollUp: () => scrollToPreviousSection(),
           ),
         ],
       ),

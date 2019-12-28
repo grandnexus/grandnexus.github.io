@@ -4,6 +4,7 @@ import 'package:grandnexus/common/scroll_button.dart';
 
 import 'package:grandnexus/home/credentials/certified_columns.dart';
 import 'package:grandnexus/home/credentials/name_columns.dart';
+import 'package:grandnexus/home/credentials/skill_columns.dart';
 import 'package:grandnexus/home/credentials/social_columns.dart';
 
 class Credentials extends StatelessWidget {
@@ -29,9 +30,14 @@ class Credentials extends StatelessWidget {
                   'images/headshot.png',
                 ),
               ),
+              const SizedBox(height: 20.0),
               NameColumns(),
+              const SizedBox(height: 20.0),
               SocialColumns(),
+              const SizedBox(height: 20.0),
               CertifiedColumns(),
+              const SizedBox(height: 30.0),
+              SkillColumns(),
             ],
           ),
           ScrollButton(

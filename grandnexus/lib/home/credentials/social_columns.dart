@@ -20,6 +20,11 @@ class SocialColumns extends StatelessWidget {
           onPressed: () => launchURL('https://bit.ly/jasonchoo-github'),
         ),
         IconButton(
+          icon: Icon(FontAwesomeIcons.medium),
+          iconSize: 25,
+          onPressed: () => launchURL('https://bit.ly/jasonchoo-medium'),
+        ),
+        IconButton(
           icon: Icon(FontAwesomeIcons.dev),
           iconSize: 25,
           onPressed: () => launchURL('https://bit.ly/jasonchoo-devpost'),
